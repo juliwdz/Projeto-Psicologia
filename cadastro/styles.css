@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0; 
+}
+
+header {
+  background-color: #49b89e;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed; /* Fixa o cabeçalho no topo da janela */
+  width: 100%; /* Ocupa toda a largura */
+  top: 0; /* Fica no topo da janela */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #388E7A;
+}
+
+/* Ícone de casa */
+.fa-home:before {
+  content: "\f015"; 
+  font-family: "Font Awesome 5 Free"; 
+  margin-right: 5px;
+}
+
+.main-content {
+  padding-top: 100px; 
+}
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #B9FFF0; 
+  }
+  
+  .logotipo{
+    float: left;
+    margin-bottom: 0px;
+  }
+
+.signup-container {
+    margin: 8px;
+    width: 320px;
+    background-color: #6be0c7 ; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+ 
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    color: #28407e; 
+    margin-bottom: 20px;
+}
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #28407e;
+}
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #49b89e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #388E7A; 
+  }
+  

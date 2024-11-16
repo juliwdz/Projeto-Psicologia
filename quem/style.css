@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d7e9ed;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar .logo a {
+    font-size: 1.8em;
+    color: #28407e;
+    text-decoration: none;
+}
+
+/* Links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #28407e;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover nos links */
+.nav-links li a:hover {
+    background-color: #85a2eb; /* Cor mais escura ao passar o mouse */
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Coloca os links abaixo do navbar */
+        right: 0;
+        background-color: #499750;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Esconde os links por padrão */
+        padding: 20px;
+    }
+
+    .nav-links li a {
+        padding: 12px;
+        font-size: 1.2em;
+    }
+
+    /* Mostrar o menu hamburguer */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Exibir links ao clicar no menu hamburguer */
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+/* Estilos da seção "Quem Somos" */
+.quem-somos {
+    background:#4cbbad;
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px 20px;
+}
+
+.quem-somos h1 {
+    color: #C3F6EB;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.texto-intro {
+    color: #C3F6EB;
+    font-size: 1.0em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.texto-completo {
+    color: #C3F6EB;
+    display: none;
+    font-size: 1.0em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.texto-completo.show {
+    display: block;
+    max-height: 1000px;
+    opacity: 1;
+}
+
+/* Botão Leia Mais */
+button {
+    margin-top: 20px;
+    background-color: #28407E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #7282aa;
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #4cbba3;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:  0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #4cbba3;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Seção Sobre Nossos Psicólogos */
+.sobre-psicologos {
+    background-color: #C3F6EB; /* Fundo suave para a seção */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sobre-psicologos h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #28407E; /* Cor diferente para o título */
+}
+
+.texto-sobre {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #333; /* Cor padrão para o texto */
+}
+
+/* Seção Nosso Compromisso */
+.nosso-compromisso {
+    background-color: #f0f0f0; /* Fundo suave de rosa claro */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.nosso-compromisso h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4cbba3; /* Cor do título */
+}
+
+.destaque {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6ee4ca; /* Cor diferenciada para o destaque */
+    font-family: sans-serif; /* Fonte diferente para destacar */
+    margin-bottom: 20px;
+}
+
+.texto-compromisso {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #333; /* Cor padrão para o texto */
+}
+
+/* Seção Depoimentos */
+.depoimentos {
+    background-color: #4cbba3; /* Fundo suave */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.depoimentos h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #C3F6EB; /* Cor do título */
+}
+
+.depoimentos p {
+    font-size: 1.2em;
+    color: #C3F6EB;
+    margin-bottom: 40px;
+}
+
+.depoimento-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+
+/* Depoimentos individuais */
+.depoimento {
+    display: none;
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.depoimento .stars {
+    color: #ffcc00;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.depoimento .comentario {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+    height: 120px; 
+    overflow-y: auto; 
+}
+
+.depoimento .nome {
+    font-size: 1em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Botões de alternância abaixo dos depoimentos */
+.depoimento-toggle {
+    margin-top: 30px;
+}
+
+.toggle-btn {
+    font-size: 2.5em;
+    color: #28407E;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.toggle-btn:hover {
+    color: #3d5697; 
+}
+
+.depoimento.active {
+    display: block;
+}
+
+/* style.css */
+
+/* style.css */
+
+/* Seção Nossa Equipe */
+.nossa-equipe {
+    background-color: #f1f1f1; /* Fundo suave */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.nossa-equipe h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #4cbba3; /* Cor do título */
+}
+
+/* Contêiner dos cards da equipe */
+.equipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Espaço entre o título e os cards */
+}
+
+/* Card individual */
+.equipe-card {
+    background-color: white;
+    width: 250px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+/* Removendo o efeito de deslizar */
+.equipe-card:hover {
+    transform: none; /* Desabilita o efeito de hover */
+}
+
+/* Título do card */
+.card-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #36a089;
+    margin-bottom: 15px;
+}
+
+/* Descrição do card */
+.card-description {
+    font-size: 1.0em;
+    color: #666;
+    line-height: 1.6;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato - Mente Aberta</title>
+    <!-- Incluindo o FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="C:\Users\naiar\OneDrive - Etec Centro Paula Souza\Projeto Psicologia\img\log (2).png" alt="logotipo">
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Informações de Contato (lado esquerdo) -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <a href="https://wa.me/55119987654321" target="_blank" class="contact-icon">
+                        <i class="fab fa-whatsapp"></i> +55 11 99876-5432
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <a href="tel:+55119987654321" class="contact-icon">
+                        <i class="fas fa-phone-alt"></i> +55 11 99876-5432
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <a href="mailto:contato@menteaberta.com" class="contact-icon">
+                        <i class="fas fa-envelope"></i> contato@menteaberta.com
+                    </a>
+                </div>
+
+                <div class="support-hours">
+                    <h3>Horário do Suporte:</h3>
+                    <p>Segunda a Sexta das 07h às 21h (sexta até as 20h)</p>
+                    <h3>Horário das Consultas:</h3>
+                    <p>Cada psicólogo tem sua própria agenda. Você encontrará horários de segunda-feira a domingo, das 5h à meia-noite.</p>
+                </div>
+            </div>
+
+            <!-- Formulário de Contato (lado direito) -->
+            <div class="form-container">
+                <h2>Entre em Contato</h2>
+                <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
+
+                <form id="contact-form">
+                    <!-- Campo de Nome -->
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <!-- Campo de E-mail -->
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <!-- Pergunta se é psicólogo -->
+                    <div class="form-group">
+                        <label>Você é psicólogo?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="is_psychologist" value="sim" required> Sim</label>
+                            <label><input type="radio" name="is_psychologist" value="nao" required> Não</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo de Mensagem -->
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Não compartilhe informações confidenciais" required></textarea>
+                    </div>
+
+                    <!-- Botão de Enviar -->
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<!-- Adicionando o Mapa com o Título de Endereço Administrativo -->
+<div class="map-container">
+    <h3><i class="fas fa-map-marker-alt"></i> Endereço Administrativo</h3>
+    <p>R. Nazir Miguel, 779 - Jardim Paulo VI, São Paulo - SP, 05570-030</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.093887526679!2d-46.793046925486024!3d-23.60096556304677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5501c461b287%3A0x1421a9f458550015!2sETEC%20Uirapuru!5e0!3m2!1spt-BR!2sbr!4v1731782643472!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!-- Seção "Quem somos?" -->
+<section class="quem-somos" id="quem-somos">
+    <div class="content">
+        <img src="C:\Users\naiar\OneDrive - Etec Centro Paula Souza\Projeto Psicologia\img\Contato.svg" alt="logotipo">
+        <h2>Quem somos?</h2>
+        <p>Conheça a equipe, nossa filosofia, nossas metas, compromissos e tudo sobre a Mente Aberta.</p>
+        <a href="C:\Users\naiar\OneDrive - Etec Centro Paula Souza\Projeto Psicologia\quem\quem.html" class="btn">Saiba mais</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Logo e Descrição -->
+        <div class="footer-logo">
+            <a href="#">Mente Aberta</a>
+            <p>O espaço onde sua mente encontra equilíbrio, saúde e bem-estar.</p>
+        </div>
+
+        <!-- Links úteis -->
+        <div class="footer-links">
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="pagina-sobre.html">Sobre Nós</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="footer-social">
+            <h3>Siga-nos</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/menteaberta" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/menteaberta" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/menteaberta" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Mente Aberta. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

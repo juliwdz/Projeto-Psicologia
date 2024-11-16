@@ -1,0 +1,412 @@
+/* Resetando os estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: (#4cbba3, #D7E9ED);
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+img {
+    width: 150px;  /* Definindo a largura da imagem */
+    height: 150px;  /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d7e9ed;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar .logo a {
+    font-size: 1.8em;
+    color: #28407e;
+    text-decoration: none;
+}
+
+/* Links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #039786;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover nos links */
+.nav-links li a:hover {
+    background-color: #85a2eb; /* Cor mais escura ao passar o mouse */
+    border-radius: 5px;
+}
+
+/* Menu Hamburguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Coloca os links abaixo do navbar */
+        right: 0;
+        background-color: #499750;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Esconde os links por padrão */
+        padding: 20px;
+    }
+
+    .nav-links li a {
+        padding: 12px;
+        font-size: 1.2em;
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o ícone de menu hamburguer */
+    }
+
+    .nav-links.show {
+        display: flex; /* Exibe o menu quando a classe 'show' for ativada */
+    }
+}
+
+/* Estilos da Seção de Contato */
+.contact-section {
+    color: #00796b;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding: 50px 0;
+    flex-wrap: wrap; /* Permite que os elementos "quebrem" em telas menores */
+}
+
+/* As informações (à esquerda) */
+.contact-info {
+    flex-basis: 45%; /* Controla o tamanho */
+    padding: 20px;
+    background-color: #C3F6EB;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* As informações de contato (Telefone, WhatsApp, etc.) */
+.contact-card {
+    margin-bottom: 20px;
+}
+
+.contact-card a {
+    background: #C3F6EB;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #039786;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-card a:hover {
+    background-color: #85a2eb;
+}
+
+.contact-card i {
+    margin-right: 10px;
+}
+
+/* Horários */
+.support-hours h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.support-hours p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Formulário de Contato (à direita) */
+.form-container {
+    flex-basis: 45%; /* Controla o tamanho */
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #C3F6EB;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28407e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d2e4f;
+}
+
+/* Estilo para o endereço */
+.address-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.address-container h4 {
+    font-size: 1.4em;  /* Diminuí o tamanho do título */
+    color: #28407e;
+    display: flex;
+    align-items: center;
+}
+
+.address-container i {
+    margin-right: 10px;
+    font-size: 1.6em;
+    color: #039786;
+}
+
+.address-container p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Estilo para o mapa */
+.map-container {
+    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #28407e;
+    display: flex;
+    align-items: center;
+}
+
+.map-container i {
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 1.6em;
+    color: #039786;
+}
+
+/* Estilo para a seção "Quem somos?" */
+.quem-somos {
+    background-color: #00b19c;  /* Cor de fundo diferente (azul claro) */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.quem-somos .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.quem-somos h2 {
+    font-size: 2.2em;
+    color: #C3F6EB;  /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.quem-somos p {
+    font-size: 1.2em;
+    color: #C3F6EB;
+    margin-bottom: 30px;
+}
+
+.quem-somos .btn {
+    background-color: #28407e;  /* Cor do botão */
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.quem-somos .btn:hover {
+    background-color: #1d2e4f;  /* Cor do botão quando passar o mouse */
+}
+
+/* Estilos para o Footer */
+.footer {
+    margin-top: 115px;
+    background-color: #28407e; /* Fundo azul escuro */
+    color: #fff; /* Texto branco */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-logo a {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-logo p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.footer-links {
+    flex: 1;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-links h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #85a2eb; /* Efeito de hover */
+}
+
+.footer-social {
+    flex: 1;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-social h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #499750; /* Cor quando o ícone é ativado */
+}
+
+.footer-bottom {
+    background-color: #1d2e4f; /* Cor de fundo mais escura para a parte inferior */
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ddd;
+}

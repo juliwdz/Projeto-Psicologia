@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo de Uso de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="Tela de login\login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Termo de uso de dados</h2>
+        <div class="checkbox-container">
+            <input type="checkbox" id="termo" />
+            <label for="termo">Li e concordo com os termos</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="politica" />
+            <label for="politica">Estou de acordo com a política</label>
+        </div>
+        <button id="btnAvancar" disabled>Avançar</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const termoCheckbox = document.getElementById("termo");
+            const politicaCheckbox = document.getElementById("politica");
+            const btnAvancar = document.getElementById("btnAvancar");
+
+            function verificarCheckboxes() {
+                btnAvancar.disabled = !(termoCheckbox.checked && politicaCheckbox.checked);
+            }
+
+            btnAvancar.addEventListener("click", () => {
+                // Redireciona para outra página ao clicar em "Avançar"
+                window.location.href = ""; // Coloque o nome da página desejada aqui
+            });
+
+            termoCheckbox.addEventListener("change", verificarCheckboxes);
+            politicaCheckbox.addEventListener("change", verificarCheckboxes);
+        });
+    </script>
+</body>
+</html>
