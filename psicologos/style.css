@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d7e9ed;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar .logo a {
+    font-size: 1.8em;
+    color: #28407e;
+    text-decoration: none;
+}
+
+/* Links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #28407e;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover nos links */
+.nav-links li a:hover {
+    background-color: #85a2eb; /* Cor mais escura ao passar o mouse */
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Coloca os links abaixo do navbar */
+        right: 0;
+        background-color: #499750;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Esconde os links por padrão */
+        padding: 20px;
+    }
+
+    .nav-links li a {
+        padding: 12px;
+        font-size: 1.2em;
+    }
+
+    /* Mostrar o menu hamburguer */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Exibir links ao clicar no menu hamburguer */
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+/* Seção de Candidatura */
+.candidate-se {
+    background:#4cbbad;
+    text-align: center;
+}
+
+.candidate-se h1 {
+    color: #C3F6EB;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.candidate-se h2 {
+    color: #C3F6EB;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.btn-candidate-se {
+    background-color: #28407E;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-candidate-se:hover {
+    background-color: #7282aa;
+}
+
+.retangulo{
+    margin-top: 0px;
+    width: 1349px; 
+    height: 20px; 
+    background-color: #28407E; 
+    border: none; 
+}
+
+.section-pacientes {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+  
+.section-text h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+  
+  .section-text p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+
+  .section-plataforma {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-icon {
+    font-size: 60px;
+    color: #4cbbad;
+    margin-right: 20px;
+  }
+  
+  .section-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .section-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .section-text h2 {
+    color: #4cbbad;
+  }
+
+  .section-agenda {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+.section-icon {
+    margin-top: 30px;
+    margin-left: 80px;
+    font-size: 80px;
+    color: #4cbbad; 
+    margin-right: 20px;
+}
+  
+  
+.section-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+  
+.section-text h2 {
+    font-size: 25px;
+    margin-top: 30px;
+    color: #4cbbad; /* Cor vermelha para o título */
+}
+  
+/* Estilo para a seção "Quem somos?" */
+.quem-somos {
+    background-color: #00b19c;  /* Cor de fundo diferente (azul claro) */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.quem-somos .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.quem-somos h2 {
+    font-size: 2.2em;
+    color: #C3F6EB;  /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.quem-somos p {
+    font-size: 1.2em;
+    color: #C3F6EB;
+    margin-bottom: 30px;
+}
+
+.quem-somos .btn {
+    background-color: #28407e;  /* Cor do botão */
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.quem-somos .btn:hover {
+    background-color: #1d2e4f;  /* Cor do botão quando passar o mouse */
+}
